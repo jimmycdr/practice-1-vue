@@ -75,6 +75,8 @@ export default {
     },
     methods: {
         submitForm() {
+            
+            if (!this.formData.name || !this.formData.email) return
             const payload = {
                 ...this.formData,
                 id: this.contact?.id || null
